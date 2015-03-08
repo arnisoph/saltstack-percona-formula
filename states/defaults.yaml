@@ -1,0 +1,7 @@
+os_family:
+  Debian:
+    tools:
+      pkgs:
+        - percona-toolkit
+        - percona-xtrabackup
+        - socat
