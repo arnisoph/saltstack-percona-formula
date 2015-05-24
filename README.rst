@@ -2,14 +2,22 @@
 saltstack-percona-formula
 =========================
 
-.. image:: http://img.shields.io/github/tag/bechtoldt/saltstack-percona-formula.svg
-    :target: https://github.com/bechtoldt/saltstack-percona-formula/tags
 
-.. image:: http://issuestats.com/github/bechtoldt/saltstack-percona-formula/badge/issue
-    :target: http://issuestats.com/github/bechtoldt/saltstack-percona-formula
+.. image:: https://img.shields.io/badge/flattr-donate-red.svg
+    :alt: Donate via flattr
+    :target: https://flattr.com/profile/bechtoldt
 
-.. image:: https://api.flattr.com/button/flattr-badge-large.png
-    :target: https://flattr.com/submit/auto?user_id=bechtoldt&url=https%3A%2F%2Fgithub.com%2Fbechtoldt%2Fsaltstack-percona-formula
+.. image:: https://img.shields.io/gratipay/bechtoldt.svg
+    :alt: Donate via Gratipay
+    :target: https://www.gratipay.com/bechtoldt/
+
+.. image:: https://img.shields.io/badge/license-Apache--2.0-blue.svg
+    :alt: Apache-2.0-licensed
+    :target: https://github.com/bechtoldt/saltstack-percona-formula/blob/master/LICENSE
+
+.. image:: https://img.shields.io/badge/gitter-chat-brightgreen.svg
+    :alt: Join Chat
+    :target: https://gitter.im/bechtoldt/saltstack-percona-formula?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
 SaltStack formula to set up and configure Percona, a relational database management system
 
@@ -17,29 +25,20 @@ SaltStack formula to set up and configure Percona, a relational database managem
     :backlinks: none
     :local:
 
+
 Instructions
 ------------
 
 Please refer to https://github.com/bechtoldt/formula-docs to learn how to use
 this formula, how it is built and how you can add your changes.
 
-**NOTICE**:
+**NOTICE:** This formula might uses the formhelper module which is a very useful Salt execution module that isn't available
+in upstream yet. Please consider retrieving it manually from https://github.com/bechtoldt/salt-modules and
+make it available to your Salt installation. Read `SaltStack documentation <http://docs.saltstack.com/en/latest/ref/modules/#modules-are-easy-to-write>`_ to
+see how this can be achieved.
 
-This formula is intended to install Percona packages and process Percona-specific modifications only. In most cases you want to use
-`saltstack-mysql-formula <https://github.com/bechtoldt/saltstack-mysql-formula>`_ to manage Percona. Refer to the pillar examples of
-`saltstack-mysql-formula <https://github.com/bechtoldt/saltstack-mysql-formula>`_ to see how to deploy a Percona MySQL server.
-
-
-Compatibility
--------------
-
-See <TODO> file to see which Salt versions and operating systems are supported.
-
-
-Dependencies
-------------
-
-None
+Take a look at older `releases <https://github.com/bechtoldt/saltstack-percona-formula/releases>`_ to get a version that isn't using the formhelper
+yet (if any).
 
 
 Contributing
@@ -54,19 +53,32 @@ In general:
 2. Add changes, test them, update docs (README.rst) if possible
 3. Submit your pull request (PR) on Github, wait for feedback
 
+But it’s better to `file an issue <https://github.com/bechtoldt/saltstack-percona-formula/issues/new>`_ with your idea first.
+
+
+Authors
+-------
+
+* Arnold Bechtoldt <mail@arnoldbechtoldt.com>
+
 
 TODO
 ----
 
-* add instructions how to use formhelper, add information about it in the
-  formula-docs (dependency), show up alternative?
+* add instructions how to use formhelper, add information about it in the formula-docs (dependency), show up alternative?
 * table/ matrix: os/salt compatibility (dedicated file)
 * add list of available states
 * add tests
 
 
-Additional Resources
---------------------
+Miscellaneous
+-------------
 
-* `saltstack-repos-formula <https://github.com/bechtoldt/saltstack-repos-formula>`_ recommended for repo management (see ``pillar_examples/repos.sls``)
-* `saltstack-mysql-formula <https://github.com/bechtoldt/saltstack-mysql-formula>`_ recommended for MySQL/ MariaDB/ Percona Server management
+Recommended formulas:
+
+* repo management (see pillar_examples/repos.sls): `saltstack-repos-formula <https://github.com/bechtoldt/saltstack-repos-formula>`_
+* MySQL/ MariaDB/ Percona Server management: `saltstack-mysql-formula <https://github.com/bechtoldt/saltstack-mysql-formula>`_
+
+Further reading:
+
+* Documentation and Standardisation of SaltStack formulas: https://github.com/bechtoldt/formula-docs

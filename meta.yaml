@@ -1,0 +1,16 @@
+name: saltstack-percona-formula
+source: https://github.com/bechtoldt/saltstack-percona-formula
+summary: SaltStack formula to set up and configure Percona, a relational database management system
+todo:
+  - add instructions how to use formhelper, add information about it in the formula-docs (dependency), show up alternative?
+  - 'table/ matrix: os/salt compatibility (dedicated file)'
+  - add list of available states
+  - add tests
+extra:
+  recommended_formulas:
+    - descr: 'repo management (see pillar_examples/repos.sls)'
+      name: saltstack-repos-formula
+      url: https://github.com/bechtoldt/saltstack-repos-formula
+    - descr: MySQL/ MariaDB/ Percona Server management
+      name: saltstack-mysql-formula
+      url: https://github.com/bechtoldt/saltstack-mysql-formula
